@@ -2,7 +2,7 @@ let fizzbuzz = 'Fizzbuzz';
 let fizz = 'Fizz';
 let buzz = 'Buzz';
 
-var fizzBuzz = function (n) {
+let fizzBuzz = function (n) {
     let x = 0;
     let bool1 = false;
     let bool2 = false;
@@ -35,5 +35,13 @@ var fizzBuzz = function (n) {
     }
     return x;
 };
+
+let onclickbutton = function (n) {
+    myHeading.textContent = fizzBuzz(n);
+}
+let value = 5;
 const myHeading = document.querySelector('h1');
-myHeading.textContent = fizzBuzz(2);
+const myHeading2 = document.querySelector('h2');
+const button = document.getElementById('button');
+//button.onclick = myHeading2.querySelector('button');
+//myHeading.textContent = fizzBuzz(value);
