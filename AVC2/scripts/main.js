@@ -36,11 +36,16 @@ let fizzBuzz = function (n) {
     return x;
 };
 
-let onclickbutton = function (n) {
+/* let onclickbutton = function (n) {
     myHeading.textContent = fizzBuzz(n);
-}
-let value = 5;
+}  */
+
+let value = 0;
+
 const myHeading = document.querySelector('h1');
 const myHeading2 = document.querySelector('h2');
 const button = document.getElementById('button');
-button.onclick = function () { myHeading.textContent = fizzBuzz(5) }
+button.onclick = function () {
+    value++;
+    myHeading2.textContent = fizzBuzz(value);
+}

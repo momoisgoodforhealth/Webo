@@ -11,6 +11,12 @@ h1 {
     color: #4cff00;
 }
 
+h2 {
+    font-size: 60px;
+    text-align: center;
+    color: #4cff00;
+}
+
 body {
   width: 600px;
   margin: 0 auto;
