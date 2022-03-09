@@ -2,6 +2,8 @@ let fizzbuzz = 'Fizzbuzz';
 let fizz = 'Fizz';
 let buzz = 'Buzz';
 let url = 'http://basic-web.dev.avc.web.usf.edu/:id';
+let url2 = 'http://basic-web.dev.avc.web.usf.edu/:id2';
+
 
 let fizzBuzz = function (n) {
     let x = 0;
@@ -57,7 +59,7 @@ function post(url, data) {
         http.onload = function () {
             resolve({ status: http.status, data: JSON.parse(http.response) });
         };
-        http.open("POST", url);
+        http.open("POST", url2);
         //Make sure that the server knows we're sending it json data.
         http.setRequestHeader("Content-Type", "application/json");
         http.send(data);
@@ -84,7 +86,7 @@ get(url).then(function (response) {
     else {
         //User "myUserName" not found.
         //response.data is null
-        post("https://example.com/myUserName", { score: 0 }); //create a new user.
+        post(url2, { score: 0 }); //create a new user.
     }
 });
 
@@ -102,7 +104,7 @@ button.onclick = function () {
     value++;
     myHeading2.textContent = fizzBuzz(value);
     let userscore = { username: localStorage.getItem('username'), score: value };
-   /*   post(url, userscore).then(function (response) {
+      post(url2, userscore).then(function (response) {
     switch (response.status) {
       case 200:
        //User was updated successfully.
@@ -126,7 +128,7 @@ button.onclick = function () {
   console.error(response.data);
         break;
     }
-          });   */
+          });     
 }
 
 
