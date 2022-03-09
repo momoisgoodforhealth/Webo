@@ -4,7 +4,7 @@
 let fizzbuzztext = 'Fizzbuzz';
 let fizz = 'Fizz';
 let buzz = 'Buzz';
-let url = 'http://basic-web.dev.avc.web.usf.edu/:id';
+
 let user = null;
 let value = 0;
 
@@ -100,7 +100,7 @@ get(url2).then(function (response) {
         const username = response.data.id; //The username that was requested.
         const score = response.data.score; //The user's current score.
         myHeading.textContent = username;
-        myHeading2.textContent = score;
+        myHeading2.textContent = fizzBuzz(score);
         value = score;
         console.log('get 200');
 
