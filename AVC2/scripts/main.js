@@ -11,7 +11,6 @@ let value = 0;
 // Linking Elements
 const myHeading2 = document.querySelector('h2');
 const button = document.getElementById('button');
-const responseheading = document.getElementById('result');
 
 // Function for Fizzbuzz
 let fizzBuzz = function (n) {
