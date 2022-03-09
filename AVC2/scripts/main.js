@@ -1,7 +1,7 @@
 // This Program Implements the FizzBuzz program and connects to the API
 
 // Initial Variable Declarations
-let fizzbuzz = 'Fizzbuzz';
+let fizzbuzztext = 'Fizzbuzz';
 let fizz = 'Fizz';
 let buzz = 'Buzz';
 let url = 'http://basic-web.dev.avc.web.usf.edu/:id';
@@ -9,6 +9,7 @@ let user = null;
 let value = 0;
 
 // Linking Elements
+const myHeading = document.getElementById('user-name');
 const myHeading2 = document.querySelector('h2');
 const button = document.getElementById('button');
 
@@ -32,7 +33,7 @@ let fizzBuzz = function (n) {
         }
 
         if (bool1 == true && bool2 == true) {
-            x = fizzbuzz;
+            x = fizzbuzztext;
         }
         else if (bool1 == true) {
             x = fizz;
@@ -52,10 +53,9 @@ let fizzBuzz = function (n) {
 
 // Executes only after loading page
 window.addEventListener('load', () => {
-    const myHeading = document.getElementById('user-name');
+ 
     myHeading.textContent = localStorage.getItem('username');
     user = localStorage.getItem('username');
-
 })
 user = localStorage.getItem('username');
 
@@ -96,20 +96,21 @@ function post(url, data) {
 // execute API AJAX Function
 get(url2).then(function (response) {
 
-    //Put all code that relies on the data from this request in here.
-
     if (response.status == 200) {
-        const username = response.data.id; //The username that was requested. In this case it is "myUserName".
+        const username = response.data.id; //The username that was requested.
         const score = response.data.score; //The user's current score.
         myHeading.textContent = username;
         myHeading2.textContent = score;
+        value = score;
+        console.log('get 200');
 
     }
 
     else {
-        //User "myUserName" not found.
+        //User not found.
         //response.data is null
         post(url2, { score: 0 }); //create a new user.
+        console.log('get new')
     }
 });
 
