@@ -43,5 +43,4 @@ let value = 5;
 const myHeading = document.querySelector('h1');
 const myHeading2 = document.querySelector('h2');
 const button = document.getElementById('button');
-//button.onclick = myHeading2.querySelector('button');
-//myHeading.textContent = fizzBuzz(value);
+button.onclick = function () { myHeading.textContent = fizzBuzz(5) }
