@@ -43,6 +43,8 @@ let fizzBuzz = function (n) {
 let value = 0;
 
 const myHeading = document.querySelector('h1');
+
+myHeading.textContent = localStorage.getItem("username");;
 const myHeading2 = document.querySelector('h2');
 const button = document.getElementById('button');
 button.onclick = function () {
