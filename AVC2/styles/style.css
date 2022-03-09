@@ -8,13 +8,15 @@ html {
 h1 {
     font-size: 60px;
     text-align: center;
+    font-family: "Courier New", monospace;
     color: #4cff00;
 }
 
 h2 {
-    font-size: 60px;
+    font-size: 50px;
     text-align: center;
-    color: #4cff00;
+    font-family: "Courier New", monospace;
+    color: #FFC04B;
 }
 
 h3 {
@@ -32,21 +34,21 @@ h4 {
 }
 
 button {
-    background-color: #4CAF50; /* Green */
-    border: none;
-    color: white;
-    padding: 15px 32px;
+    background-color: #FF8142;
+    color: black;
+    // padding: 15px 25px;
     font-family: "Courier New", monospace;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+    font-size: 40px;
+    align-content: center;
 }
 
-label {
-    font-size: 60px;
+input {
+    font-size: 30px;
     text-align: center;
-    color: #4cff00;
+    color: #808080;
 }
 
 body {
