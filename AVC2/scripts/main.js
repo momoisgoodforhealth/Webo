@@ -30,21 +30,19 @@ let fizzBuzz = function (n) {
             x = buzz;
         }
         else {
-            x = String(i);
+            x = String(i); 
         }
     }
     return x;
 };
 
-/* let onclickbutton = function (n) {
-    myHeading.textContent = fizzBuzz(n);
-}  */
-
 let value = 0;
 
-const myHeading = document.querySelector('h1');
 
-myHeading.textContent = localStorage.getItem("username");;
+window.addEventListener('load', () => {
+    const myHeading = document.getElementById('user-name');
+    myHeading.textContent = localStorage.getItem('username');
+})
 const myHeading2 = document.querySelector('h2');
 const button = document.getElementById('button');
 button.onclick = function () {

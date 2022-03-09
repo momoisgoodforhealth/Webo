@@ -3,14 +3,15 @@
 <head>
     <meta charset="utf-8">
     <link href="styles/style.css" rel="stylesheet" type="text/css">
-    <script src="scripts/log.js"></script>
-    <script src="scripts/main.js"></script>
-</head>
+    </head>
 <body>
-    <h1> Enter Username </h1>
-    <input type="text" id="input" name="fname">
-    <button id="submitbutton" type="button" onclick="loadmainpage()">Submit</button>
     <script src="scripts/log.js"></script>
-    <script src="scripts/main.js"></script>
+    <form action="main.js" method="post">
+        <h1> Enter Username </h1>
+        <label for="username">username</label>
+        <input type="text" id="input" name="username" placeholder="enter username">
+        <button type="button" onclick="loadmainpage()">Submit</button>
+    </form>
+
 </body>
 </html>

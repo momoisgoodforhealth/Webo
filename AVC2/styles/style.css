@@ -17,6 +17,13 @@ h2 {
     color: #4cff00;
 }
 
+
+label {
+    font-size: 60px;
+    text-align: center;
+    color: #4cff00;
+}
+
 body {
   width: 600px;
   margin: 0 auto;
