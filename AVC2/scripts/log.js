@@ -1,15 +1,12 @@
+// This program implements the username/login page
+
+// button link
 const submitbutton = document.getElementById('submitbutton');
 
+// function that opens main page
 var loadmainpage = function () {
     const inputusername = document.getElementById('input').value;
     const username = inputusername;
-    localStorage.setItem("username", username);
+    localStorage.setItem("username", username);  // store username locally
     location.href = 'main_program.html'
 }
-
-//submitbutton.onclick = function () {
-   // let inputusername = document.getElementById('input').value;
-   // let username = inputusername;
-  //  localStorage.setItem("username", username);
-   // location.href = 'main_program.html';
-//}
